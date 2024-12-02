@@ -33,7 +33,7 @@ def build_model(bottom_model, classes):
 input = pathlib.Path(__file__).parents[1] / "data" / "fer2013" / "fer2013.csv"
 
 if not input.exists():
-    print("Input file {input} not found. System exiting...")
+    print(f"Input file {input} not found. System exiting...")
     sys.exit(1)
 
 df = pd.read_csv(input)
@@ -68,6 +68,7 @@ img_width = X_train.shape[1]
 img_height = X_train.shape[2]
 img_depth = X_train.shape[3]
 num_classes = y_train.shape[1]
+print(num_classes)
 
 X_train = X_train / 255
 X_valid = X_valid / 255
