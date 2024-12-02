@@ -1,4 +1,7 @@
 import math
+import sys
+import pathlib
+
 import numpy as np
 import pandas as pd
 
@@ -17,7 +20,6 @@ from tensorflow.keras.callbacks import Callback, EarlyStopping, ReduceLROnPlatea
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 import keras.utils
-import pathlib
 
 
 def build_model(bottom_model, classes):
@@ -30,6 +32,9 @@ def build_model(bottom_model, classes):
 
 input = pathlib.Path(__file__).parents[1] / "data" / "fer2013" / "fer2013.csv"
 
+if not input.exists():
+    print("Input file {input} not found. System exiting...")
+    sys.exit(1)
 
 df = pd.read_csv(input)
 
