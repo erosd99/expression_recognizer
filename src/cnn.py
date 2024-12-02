@@ -141,7 +141,8 @@ history = model.fit(
 )
 
 model_yaml = model.to_json()
-with open("model.yaml", "w") as yaml_file:
+data_dir = pathlib.Path(__file__).parents[1] / "data"
+with open(data_dir / "model.yaml", "w") as yaml_file:
     yaml_file.write(model_yaml)
 
-model.save("model.h5")
+model.save(data_dir / "model.h5")
