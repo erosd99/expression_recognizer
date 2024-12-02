@@ -4,4 +4,13 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "keras-utils>=1.0.13",
+    "mediapipe>=0.10.18",
+    "numpy>=1.26.4",
+    "opencv-python>=4.10.0.84",
+    "pandas>=2.2.3",
+    "scalene>=1.5.48",
+    "scikit-learn>=1.5.2",
+    "tensorflow>=2.18.0",
+]
