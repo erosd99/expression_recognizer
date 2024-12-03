@@ -17,4 +17,7 @@ Simple facial expression recognizer written in python
         1. Download and extract the (https://www.kaggle.com/code/gauravsharma99/facial-emotion-recognition/input?select=fer2013)[fer2013.tar.gz] dataset into the **data** directory
         2. Run the **src/cnn.py** script. **WARNING:** The training is pretty slow, for me it took ~5 hours.
     
-3. After the model is trained, run the main script. **src/face_tracker.py**
+3. After the model is trained, run the main script. 
+    1. Put your desired video in the **data** folder.
+    2. At the bottom of the **src/face_tracker.py** file, replace "happy_man.mp4" with the name of your video clip.
+    3. Run **src/face_tracker.py**

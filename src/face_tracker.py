@@ -157,4 +157,4 @@ def run_detection(video_path: str, model_path: str, target_width=800, target_hei
 if __name__ == "__main__":
     import pathlib
     data_path = pathlib.Path(__file__).parents[1] / "data"
-    run_detection(data_path / "people_talking.mp4", data_path / "model.h5")
+    run_detection(data_path / "happy_man.mp4", data_path / "model.h5")

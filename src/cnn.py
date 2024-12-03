@@ -73,7 +73,7 @@ print(num_classes)
 X_train = X_train / 255
 X_valid = X_valid / 255
 
-vgg = tf.keras.applications.VGG19(
+vgg = tf.keras.applications.VGG19facial(
     weights="imagenet", include_top=False, input_shape=(48, 48, 3)
 )
 
